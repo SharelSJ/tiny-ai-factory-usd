@@ -13,6 +13,10 @@ rack.GetPrim().CreateAttribute(
     Sdf.ValueTypeNames.Token
 ).Set("computeRack")
 
+# Bring in the original rack, including its geometry
+rack.GetPrim().GetReferences().AddReference("rack.usda")
+
+
 # create variant set
 # /Rack has a configurable dimension called configuration,
 # and it has two legal choices.

@@ -1,0 +1,73 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    doc = """Generated from Composed Stage of root layer /Users/Sharel/Developer/tiny-ai-factory-usd/payload_facility.usda
+"""
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "World"
+{
+    def Xform "DataHall_A"
+    {
+        def Xform "Rack_01"
+        {
+        }
+    }
+
+    def Xform "DataHall_B"
+    {
+        double3 xformOp:translate = (0, 5, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+
+        def Xform "Rack_01"
+        {
+            custom token assetType = "computeRack"
+            custom int gpuCount = 72
+            double3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+
+            def Scope "Geometry"
+            {
+                def Cube "Body"
+                {
+                    double size = 1
+                }
+            }
+        }
+
+        def Xform "Rack_02"
+        {
+            custom token assetType = "computeRack"
+            custom int gpuCount = 72
+            double3 xformOp:translate = (2, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+
+            def Scope "Geometry"
+            {
+                def Cube "Body"
+                {
+                    double size = 1
+                }
+            }
+        }
+
+        def Xform "Rack_03"
+        {
+            custom token assetType = "computeRack"
+            custom int gpuCount = 72
+            double3 xformOp:translate = (4, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+
+            def Scope "Geometry"
+            {
+                def Cube "Body"
+                {
+                    double size = 1
+                }
+            }
+        }
+    }
+}
+

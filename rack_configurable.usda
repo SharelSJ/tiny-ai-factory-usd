@@ -6,6 +6,7 @@
 )
 
 def Xform "Rack" (
+    prepend references = @rack.usda@
     variants = {
         string configuration = "72_GPU"
     }

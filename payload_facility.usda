@@ -11,8 +11,6 @@ def Xform "World"
     {
         def Xform "Rack_01"
         {
-            custom token assetType = "computeRack"
-            custom token zone = "DataHall_A"
         }
     }
 
@@ -22,14 +20,6 @@ def Xform "World"
     {
         double3 xformOp:translate = (0, 5, 0)
         uniform token[] xformOpOrder = ["xformOp:translate"]
-    }
-
-    def "Cooling"
-    {
-        def Xform "CoolingUnit_01"
-        {
-            custom token assetType = "coolingUnit"
-        }
     }
 }
 
