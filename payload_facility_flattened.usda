@@ -14,7 +14,306 @@ def Xform "World"
         def Xform "Rack_01"
         {
             custom token assetType = "computeRack"
+            custom int gpuCount = 72
             custom token zone = "DataHall_A"
+
+            def Scope "Geometry"
+            {
+                def Cube "FrontLeftPost" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Frame>
+                    double size = 1
+                    float3 xformOp:scale = (0.05, 0.05, 2)
+                    double3 xformOp:translate = (-0.275, -0.575, 1)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "FrontRightPost" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Frame>
+                    double size = 1
+                    float3 xformOp:scale = (0.05, 0.05, 2)
+                    double3 xformOp:translate = (0.275, -0.575, 1)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "RearLeftPost" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Frame>
+                    double size = 1
+                    float3 xformOp:scale = (0.05, 0.05, 2)
+                    double3 xformOp:translate = (-0.275, 0.575, 1)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "RearRightPost" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Frame>
+                    double size = 1
+                    float3 xformOp:scale = (0.05, 0.05, 2)
+                    double3 xformOp:translate = (0.275, 0.575, 1)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Base" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Frame>
+                    double size = 1
+                    float3 xformOp:scale = (0.6, 1.2, 0.06)
+                    double3 xformOp:translate = (0, 0, 0.03)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Top" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Frame>
+                    double size = 1
+                    float3 xformOp:scale = (0.6, 1.2, 0.06)
+                    double3 xformOp:translate = (0, 0, 1.97)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_01" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Server>
+                    double size = 1
+                    custom int slotIndex = 1
+                    float3 xformOp:scale = (0.52, 1.05, 0.15)
+                    double3 xformOp:translate = (0, 0, 0.16)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_01_Status" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Accent>
+                    double size = 1
+                    float3 xformOp:scale = (0.035, 0.015, 0.025)
+                    double3 xformOp:translate = (0.2, -0.535, 0.16)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_02" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Server>
+                    double size = 1
+                    custom int slotIndex = 2
+                    float3 xformOp:scale = (0.52, 1.05, 0.15)
+                    double3 xformOp:translate = (0, 0, 0.36)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_02_Status" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Accent>
+                    double size = 1
+                    float3 xformOp:scale = (0.035, 0.015, 0.025)
+                    double3 xformOp:translate = (0.2, -0.535, 0.36)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_03" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Server>
+                    double size = 1
+                    custom int slotIndex = 3
+                    float3 xformOp:scale = (0.52, 1.05, 0.15)
+                    double3 xformOp:translate = (0, 0, 0.56)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_03_Status" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Accent>
+                    double size = 1
+                    float3 xformOp:scale = (0.035, 0.015, 0.025)
+                    double3 xformOp:translate = (0.2, -0.535, 0.56)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_04" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Server>
+                    double size = 1
+                    custom int slotIndex = 4
+                    float3 xformOp:scale = (0.52, 1.05, 0.15)
+                    double3 xformOp:translate = (0, 0, 0.7600000000000001)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_04_Status" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Accent>
+                    double size = 1
+                    float3 xformOp:scale = (0.035, 0.015, 0.025)
+                    double3 xformOp:translate = (0.2, -0.535, 0.7600000000000001)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_05" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Server>
+                    double size = 1
+                    custom int slotIndex = 5
+                    float3 xformOp:scale = (0.52, 1.05, 0.15)
+                    double3 xformOp:translate = (0, 0, 0.9600000000000001)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_05_Status" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Accent>
+                    double size = 1
+                    float3 xformOp:scale = (0.035, 0.015, 0.025)
+                    double3 xformOp:translate = (0.2, -0.535, 0.9600000000000001)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_06" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Server>
+                    double size = 1
+                    custom int slotIndex = 6
+                    float3 xformOp:scale = (0.52, 1.05, 0.15)
+                    double3 xformOp:translate = (0, 0, 1.16)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_06_Status" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Accent>
+                    double size = 1
+                    float3 xformOp:scale = (0.035, 0.015, 0.025)
+                    double3 xformOp:translate = (0.2, -0.535, 1.16)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_07" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Server>
+                    double size = 1
+                    custom int slotIndex = 7
+                    float3 xformOp:scale = (0.52, 1.05, 0.15)
+                    double3 xformOp:translate = (0, 0, 1.36)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_07_Status" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Accent>
+                    double size = 1
+                    float3 xformOp:scale = (0.035, 0.015, 0.025)
+                    double3 xformOp:translate = (0.2, -0.535, 1.36)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_08" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Server>
+                    double size = 1
+                    custom int slotIndex = 8
+                    float3 xformOp:scale = (0.52, 1.05, 0.15)
+                    double3 xformOp:translate = (0, 0, 1.56)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+
+                def Cube "Server_08_Status" (
+                    apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/DataHall_A/Rack_01/Looks/Accent>
+                    double size = 1
+                    float3 xformOp:scale = (0.035, 0.015, 0.025)
+                    double3 xformOp:translate = (0.2, -0.535, 1.56)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+                }
+            }
+
+            def Scope "Looks"
+            {
+                def Material "Frame"
+                {
+                    token outputs:surface.connect = </World/DataHall_A/Rack_01/Looks/Frame/PreviewSurface.outputs:surface>
+
+                    def Shader "PreviewSurface"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (0.08, 0.1, 0.12)
+                        float inputs:metallic = 0.7
+                        float inputs:roughness = 0.3
+                        token outputs:surface
+                    }
+                }
+
+                def Material "Server"
+                {
+                    token outputs:surface.connect = </World/DataHall_A/Rack_01/Looks/Server/PreviewSurface.outputs:surface>
+
+                    def Shader "PreviewSurface"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (0.015, 0.02, 0.025)
+                        float inputs:metallic = 0
+                        float inputs:roughness = 0.4
+                        token outputs:surface
+                    }
+                }
+
+                def Material "Accent"
+                {
+                    token outputs:surface.connect = </World/DataHall_A/Rack_01/Looks/Accent/PreviewSurface.outputs:surface>
+
+                    def Shader "PreviewSurface"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (0, 0.8, 0.2)
+                        float inputs:metallic = 0
+                        float inputs:roughness = 0.35
+                        token outputs:surface
+                    }
+                }
+            }
         }
     }
 

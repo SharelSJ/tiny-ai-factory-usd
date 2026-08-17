@@ -19,6 +19,10 @@ rack = UsdGeom.Xform.Define(
     "/World/DataHall_A/Rack_01"
 )
 
+rack.GetPrim().GetReferences().AddReference(
+    "rack_configurable.usda"
+)
+
 # DataHall_B exists as location in facility
 # but contents are behind a payload
 datahall_b = UsdGeom.Xform.Define(

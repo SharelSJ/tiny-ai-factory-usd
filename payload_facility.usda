@@ -9,7 +9,9 @@ def Xform "World"
 {
     def Xform "DataHall_A"
     {
-        def Xform "Rack_01"
+        def Xform "Rack_01" (
+            prepend references = @rack_configurable.usda@
+        )
         {
             custom token assetType = "computeRack"
             custom token zone = "DataHall_A"
