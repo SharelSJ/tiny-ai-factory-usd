@@ -1,0 +1,27 @@
+#usda 1.0
+(
+    defaultPrim = "Rack"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "Rack" (
+    variants = {
+        string configuration = "72_GPU"
+    }
+    prepend variantSets = "configuration"
+)
+{
+    custom token assetType = "computeRack"
+    variantSet "configuration" = {
+        "144_GPU" {
+            custom int gpuCount = 144
+
+        }
+        "72_GPU" {
+            custom int gpuCount = 72
+
+        }
+    }
+}
+

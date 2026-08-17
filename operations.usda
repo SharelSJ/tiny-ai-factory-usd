@@ -1,0 +1,13 @@
+#usda 1.0
+
+over "World"
+{
+    over "DataHall_A"
+    {
+        over "Rack_01"
+        {
+            custom token status = "maintenance"
+        }
+    }
+}
+

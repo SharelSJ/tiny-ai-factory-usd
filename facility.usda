@@ -1,0 +1,12 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    subLayers = [
+        @operations.usda@,
+        @cooling.usda@,
+        @rack_assets.usda@
+    ]
+    upAxis = "Z"
+)
+

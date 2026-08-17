@@ -1,0 +1,10 @@
+#usda 1.0
+
+def "World"
+{
+    def Scope "Cooling"
+    {
+        custom token systemType = "liquidCooling"
+    }
+}
+

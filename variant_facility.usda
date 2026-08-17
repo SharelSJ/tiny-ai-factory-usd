@@ -1,0 +1,35 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "World"
+{
+    def Xform "DataHall_A"
+    {
+        def Xform "Rack_01" (
+            prepend references = @rack_configurable.usda@
+            variants = {
+                string configuration = "72_GPU"
+            }
+        )
+        {
+            double3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
+
+        def Xform "Rack_02" (
+            prepend references = @rack_configurable.usda@
+            variants = {
+                string configuration = "144_GPU"
+            }
+        )
+        {
+            double3 xformOp:translate = (2, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
+    }
+}
+

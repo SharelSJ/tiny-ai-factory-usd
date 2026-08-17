@@ -1,0 +1,20 @@
+#usda 1.0
+(
+    defaultPrim = "Rack"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "Rack"
+{
+    custom token assetType = "computeRack"
+
+    def Scope "Geometry"
+    {
+        def Cube "Body"
+        {
+            double size = 1
+        }
+    }
+}
+
