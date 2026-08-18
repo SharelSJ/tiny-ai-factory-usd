@@ -39,3 +39,5 @@ Stage:        Rack_01.status = maintenance
 - ✓ racks belong to a zone
 - ✓ composition dependencies resolve
 - ✓ expected variants exist
+
+![Project Snapshot](project snapshot.png)
