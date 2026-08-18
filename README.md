@@ -2,6 +2,8 @@
 
 This project builds a tiny AI-factory digital twin one OpenUSD concept at a time.
 
+![Project Snapshot](project_snapshot.png)
+
 | Step | Pressure | OpenUSD mechanism |
 |---|---|---|
 | 1. Describe a rack | Represent a physical asset as structured data | Prims, attributes, transforms, geometry |
@@ -39,5 +41,3 @@ Stage:        Rack_01.status = maintenance
 - ✓ racks belong to a zone
 - ✓ composition dependencies resolve
 - ✓ expected variants exist
-
-![Project Snapshot](project_snapshot.png)
