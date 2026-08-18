@@ -40,4 +40,4 @@ Stage:        Rack_01.status = maintenance
 - ✓ composition dependencies resolve
 - ✓ expected variants exist
 
-![Project Snapshot](project snapshot.png)
+![Project Snapshot](project_snapshot.png)
