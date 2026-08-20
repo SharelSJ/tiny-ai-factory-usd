@@ -41,3 +41,16 @@ Stage:        Rack_01.status = maintenance
 - ✓ racks belong to a zone
 - ✓ composition dependencies resolve
 - ✓ expected variants exist
+
+## Omniverse extension
+
+This repository also includes a minimal Omniverse runtime extension.
+
+OpenUSD defines and composes the AI-factory world.  
+Omniverse consumes that world at runtime to produce RTX-rendered output.
+
+```text
+OpenUSD Stage
+→ ovstage
+→ ovrtx
+→ facility.png
