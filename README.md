@@ -44,7 +44,7 @@ Stage:        Rack_01.status = maintenance
 
 ## Omniverse extension
 
-This repository also includes a minimal Omniverse runtime extension.
+This repository includes a Omniverse runtime extension.
 
 OpenUSD defines and composes the AI-factory world.  
 Omniverse consumes that world at runtime to produce RTX-rendered output.
